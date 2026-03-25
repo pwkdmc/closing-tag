@@ -9,4 +9,5 @@
     repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(#e7e7e7, #1a1a1a);
   --content-width: clamp(375px, 260.5634px + 30.5164vw, 700px);
+  --outline-color: #fff;
 }

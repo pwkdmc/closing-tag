@@ -70,7 +70,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 12px;
 }
 
 .card__like-button {
@@ -85,4 +84,36 @@
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   line-height: 90%;
+}
+
+.card__icon-button {
+  border: none;
+  background-color: #fff;
+}
+
+.decor {
+  position: relative;
+}
+
+.description {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-shadow:
+    -1px 0 var(--outline-color),
+    0 1px var(--outline-color),
+    1px 0 var(--outline-color),
+    0 -1px var(--outline-color);
+  opacity: 0.5;
+}
+
+@supports ((text-stroke: 1px #000) or (-webkit-text-stroke: 1px #000)) {
+  .description {
+    -webkit-text-stroke: 1px var(--outline-color);
+    text-stroke: 1px var(--outline-color);
+    text-shadow: none;
+  }
 }
