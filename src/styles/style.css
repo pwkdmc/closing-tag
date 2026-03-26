@@ -56,13 +56,45 @@
 .image {
   inline-size: 100%;
   padding: 0;
-  border-bottom: 2px solid #000;
+}
+
+.image_preparation-for-work {
+  filter: brightness(150%);
+}
+
+.image_clean-sheet {
+  filter: saturate(170%);
+}
+
+.image_i-cant-do-it {
+  filter: hue-rotate(110deg);
+}
+
+.image_pursuit-of-the-ideal {
+  filter: sepia(40%);
+}
+
+.image_nearby {
+  filter: invert(0.2);
+}
+
+.image_workaround-strategies {
+  filter: contrast(50%) brightness(75%);
+}
+
+.image_hands-go-down {
+  filter: saturate(65%);
+}
+
+.image_im-here {
+  filter: blur(2px);
 }
 
 .card__text {
   padding: 23px 25px;
   display: grid;
   gap: 25px;
+  border-top: 2px solid #000;
 }
 
 .card__like {
@@ -96,6 +128,7 @@
 
 .decor {
   position: relative;
+  line-height: 0;
 }
 
 .description {
