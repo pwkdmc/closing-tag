@@ -72,12 +72,15 @@
   align-items: center;
 }
 
-.card__like-button {
-  inline-size: 130px;
-  padding: 7px 0;
+.button {
   background-color: #fff;
   border-radius: 0;
   border: 2px solid #000;
+}
+
+.card__like-button {
+  padding: 7px 0;
+  inline-size: 130px;
 }
 
 .button__text {
@@ -116,4 +119,68 @@
     text-stroke: 1px var(--outline-color);
     text-shadow: none;
   }
+}
+
+.button-save {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 17px 19px 16px 20px;
+  margin: 50px auto 0;
+}
+
+@media (width <= 375px) {
+  .button-save {
+    flex-direction: column;
+  }
+
+  .button-save .floppy-icon {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+}
+
+.dialog {
+  position: fixed;
+  inset: 0;
+  inline-size: 341px;
+  border: 2px solid #000;
+  padding: 28px 40px;
+}
+
+.dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.dialog:is([open]) {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.dialog__content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.dialog__text {
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.dialog__button {
+  padding: 7px 120px 6px 114px;
+  text-transform: uppercase;
+}
+
+.dialog__content .floppy-icon {
+  min-inline-size: 39px;
 }
