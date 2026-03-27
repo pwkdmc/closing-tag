@@ -108,6 +108,30 @@
   background-color: #fff;
   border-radius: 0;
   border: 2px solid #000;
+  position: relative;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px var(--accent-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.button:after {
+  content: '';
+  position: absolute;
+  background-color: #000;
+  inset: 0;
+  scale: 0 1;
+  transform-origin: left center;
+  transition: scale 0.5s ease-in-out;
+}
+
+.button:hover:after {
+  scale: 1 1;
 }
 
 .card__like-button {
@@ -119,6 +143,10 @@
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
   line-height: 90%;
+  mix-blend-mode: difference;
+  color: var(--text-color);
+  position: relative;
+  z-index: 1;
 }
 
 .card__icon-button {
@@ -160,6 +188,14 @@
   align-items: center;
   padding: 17px 19px 16px 20px;
   margin: 50px auto 0;
+}
+
+.button-save .floppy-icon {
+  mix-blend-mode: difference;
+  fill: var(--text-color);
+  stroke: var(--text-color);
+  position: relative;
+  z-index: 1;
 }
 
 @media (width <= 375px) {

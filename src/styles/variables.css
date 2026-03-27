@@ -10,4 +10,6 @@
     linear-gradient(#e7e7e7, #1a1a1a);
   --content-width: clamp(375px, 260.5634px + 30.5164vw, 700px);
   --outline-color: #fff;
+  --accent-color: #000;
+  --text-color: #fff;
 }
