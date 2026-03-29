@@ -318,3 +318,12 @@
   fill: var(--animation-fill-color);
   transition: fill 0.3s 0.06s linear;
 }
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: scaling 0.3s ease-in 0.1s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s ease-in 0.3s;
+}
